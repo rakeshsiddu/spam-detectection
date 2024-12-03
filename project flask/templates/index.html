@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Spam Classification</title>
+  </head>
+  <body>
+    <h1>Spam Detection</h1>
+    <form method="POST">
+      <label for="email_content">Enter the email content:</label><br /><br />
+      <textarea
+        id="email_content"
+        name="email_content"
+        rows="10"
+        cols="50"
+        placeholder="Type or paste your email here..."
+      ></textarea
+      ><br /><br />
+      <button type="submit">Classify</button>
+    </form>
+
+    {% if result %}
+    <h2>The email is classified as: {{ result }}</h2>
+    {% endif %}
+  </body>
+</html>
